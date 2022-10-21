@@ -1,16 +1,20 @@
 
 
 for(let x = 1; x <= 100; x++){
-    let li = document.createElement('li')
-    li.innerText = ""
+    let div = document.createElement('div')
+    div.innerText = ""
     if(x % 3 == 0 && x % 5 == 0){
-        li.innerText += "FizzBazz";
+        div.innerText += "FizzBazz";
+        div.classList.add("red");
     }else if(x % 5 == 0) {
-        li.innerText += "Buzz";
+        div.classList.add("yellow");
+        div.innerText += "Buzz";
     }else if(x % 3 == 0){
-        li.innerText += "Fizz";
+        div.classList.add("green");
+        div.innerText += "Fizz";
     }else{
-        li.innerText += x;
+        div.innerText += x;
+        div.classList.add("blu");
     }
-    document.getElementById('lista').appendChild(li);
+    document.getElementById('box-cont').appendChild(div);
 }
